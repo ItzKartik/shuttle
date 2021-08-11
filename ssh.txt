@@ -1,0 +1,5 @@
+167.86.127.254
+ssh root@167.86.127.254
+wJ3aJedHbSQqc
+
+https://github.com/ItzKartik/visaspace.git

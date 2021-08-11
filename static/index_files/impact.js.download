@@ -1,0 +1,67 @@
+jQuery(document).ready(function($){
+ 
+
+  function  convertData(data){
+    data = data.replace(/[^\d\.]/g, "");
+    return data;
+  }
+  
+  const getStart=function getStart(){
+ jQuery.getJSON( "https://fdtu0vcsui.execute-api.eu-west-1.amazonaws.com/prod/moove-stats/stats", function( data ) {
+  const {total_hours,total_km,trips_completed,no_of_cities}=data;
+
+   jQuery(".elementor-counter-number").eq(0).numerator( {fromValue: 0,toValue:parseFloat(convertData(`${trips_completed}`)),duration:2000,delimiter: ','});
+//    jQuery(".elementor-counter-number").eq(1).numerator( {fromValue: 0,toValue:parseFloat( convertData(`${total_drivers}`)),duration:2000,delimiter: ','});
+   jQuery(".elementor-counter-number").eq(1).numerator( {fromValue: 0,toValue:parseFloat(convertData(`${total_km}`)),duration:2000,delimiter: ','});
+   jQuery(".elementor-counter-number").eq(2).numerator( {fromValue: 0,toValue:parseFloat(convertData(`${no_of_cities}`)),duration:2000,delimiter: ','});
+   jQuery(".elementor-counter-number").eq(3).numerator( {fromValue: 0,toValue: parseFloat(convertData(`${total_hours}`)),duration:2000,delimiter: ','});
+   
+});//GetJson
+  
+} //function
+
+
+var waypoint = new Waypoint({
+  element: jQuery('#impact').prev(),
+  handler: function(direction) {
+  getStart();
+  //console.log('Scrolled to waypoint!')
+
+  },
+});
+
+
+// var waypoint2 = new Waypoint({
+//   element: jQuery('#impact2'),
+//   handler: function(direction) {
+//   getStart();
+//   console.log('Scrolled to waypoint 2!')
+
+//   },
+// });
+
+/*
+var inview = new Waypoint.Inview({
+  element: jQuery('#impact'),
+  enter: function(direction) {
+    getStart();
+  console.log('Scrolled to waypoint! Down');
+  },
+  entered: function(direction) {
+ getStart();
+  console.log('Scrolled to waypoint! On it');
+  },
+  exit: function(direction) {
+   getStart();
+  console.log('Scrolled to waypoint! out');
+  },
+  exited: function(direction) {
+    getStart();
+  console.log('Scrolled to waypoint! Out Totally');
+  }
+})*/
+
+
+
+    
+});
