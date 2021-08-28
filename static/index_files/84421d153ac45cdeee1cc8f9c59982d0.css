@@ -23285,7 +23285,7 @@ body:not(.elementor-editor-active) .fade-in.elementor-section.effect-fade-in, bo
 }
 
 .elementor-247 .elementor-element.elementor-element-d6281e2:not(.elementor-motion-effects-element-type-background), .elementor-247 .elementor-element.elementor-element-d6281e2>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-    background-image: url("https://moove.africa/backend/wp-content/uploads/2021/02/Group-469.png");
+    background-color: #010080;
     background-position: center right;
     background-repeat: no-repeat;
     background-size: cover
@@ -23560,6 +23560,7 @@ body .elementor-247 .elementor-element.elementor-element-2723591 .elementor-labe
 }
 
 .elementor-247 .elementor-element.elementor-element-2723591 .elementor-button[type=submit] {
+    background: #010080;
     color: #fff
 }
 
@@ -23902,7 +23903,7 @@ html, body {
 }
 
 select, option {
-    color: #000!important;
+    color: #fff;
     opacity: 1;
     font-size: 15px!important;
     font-weight: 500!important;
@@ -23971,7 +23972,7 @@ input.elementor-field.elementor-size-lg.elementor-field-textual {
     font-style: normal;
     font-weight: 400;
     font-display: auto;
-    src: url('https://moove.africa/backend/wp-content/uploads/2021/02/Barlow-SemiBold.ttf') format('truetype')
+    src: url('/static/index_files/Barlow-SemiBold.ttf') format('truetype')
 }
 
 .elementor-212 .elementor-element.elementor-element-899c69d>.elementor-container {
