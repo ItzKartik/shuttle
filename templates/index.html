@@ -194,9 +194,9 @@
                                                                 }
                                                                 function redirect_it() {
                                                                     var city = $('#form-field-city').val()
-                                                                    var url = "http://" + location.host + '/register/city/' + city;
+                                                                    var url = location.protocol+"://" + location.host + '/register/city/' + city + "/";
                                                                     console.log(url);
-                                                                    location.replace(url);
+                                                                    location.href = url;
                                                                 }
                                                             </script>
                                                             <div class="elementor-element elementor-element-fcc4faa elementor-button-align-stretch elementor-widget elementor-widget-form"
